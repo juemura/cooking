@@ -18,6 +18,7 @@
         type: Phaser.AUTO,
         width: 800,
         height: 600,
+       physics: {default: 'arcade', arcade: {gravity: {y: 300}, debug: false}},
        scene: {
             preload: preload,
             create: create,
@@ -28,13 +29,21 @@
     var game = new Phaser.Game(config);
 
     function preload ()
-    {   this.load.image('chicken', 'fried_chicken.jpg');
+    {this.load.image('chicken', 'fried_chicken.jpg');
+     this.load.image('french.fries', 'french_fries.jpg');
+     this.load.image('chow.mein', 'chow_mein.jpg');
+     this.load.image('fried.rice', 'fried_rice.png');
     }
+    
 
     function create ()
     {
-       chicken=this.add.image (100,50, "chicken");
-       chicken.width=40;
+      recipes = this.physics.add.staticGroup (); 
+     recipes.create(200, 150, 'chicken').setScale(0.15).refreshBody();
+     recipes.create(600,150, 'french.fries').setScale(0.3).refreshBody();
+     recipes.create(200, 450, 'chow.mein').setScale(0.45).refreshBody();
+     recipes.create(650, 450, 'fried.rice').setScale(0.45).refreshBody(); 
+       
     }
 
     function update ()
