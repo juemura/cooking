@@ -2,8 +2,9 @@
 <html lang="en"> 
 <head> 
     <meta charset="UTF-8" />
-    <title>Making your first Phaser 3 Game - Part 1</title>
+    <title>Cooking with Kelly and Michelle</title>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.1.1/dist/phaser.js"></script>
+    <script src="kitchen.js"></script>
     <style type="text/css">
         body {
             margin: 0;
@@ -12,45 +13,7 @@
 </head>
 <body>
 
-<script type="text/javascript">
-
-    var config = {
-        type: Phaser.AUTO,
-        width: 800,
-        height: 600,
-       physics: {default: 'arcade', arcade: {gravity: {y: 300}, debug: false}},
-       scene: {
-            preload: preload,
-            create: create,
-            update: update
-        }
-    };
-
-    var game = new Phaser.Game(config);
-
-    function preload ()
-    {this.load.image('chicken', 'fried_chicken.jpg');
-     this.load.image('french.fries', 'french_fries.jpg');
-     this.load.image('chow.mein', 'chow_mein.jpg');
-     this.load.image('fried.rice', 'fried_rice.png');
-    }
-    
-
-    function create ()
-    {
-      recipes = this.physics.add.staticGroup (); 
-     recipes.create(200, 150, 'chicken').setScale(0.15).refreshBody();
-     recipes.create(600,150, 'french.fries').setScale(0.3).refreshBody();
-     recipes.create(200, 450, 'chow.mein').setScale(0.45).refreshBody();
-     recipes.create(650, 450, 'fried.rice').setScale(0.45).refreshBody(); 
-       
-    }
-
-    function update ()
-    {
-    }
-
-</script>
+   <div id="gamediv"></div>
 
 </body>
 </html>
