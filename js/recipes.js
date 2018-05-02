@@ -2,7 +2,7 @@ var recipes = function(game){}
  
 recipes.prototype = {
     preload: function(){       
-        this.game.load.image("fried_rice","../images/friedrice.jpg");      
+        this.game.load.image("fried_rice","../cooking/images/friedrice.jpg");      
 	},
     create: function(){
         var foodButton = this.game.add.button(50,50,"fried_rice",this.openKitchen,this);
