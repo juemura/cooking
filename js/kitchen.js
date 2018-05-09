@@ -9,7 +9,7 @@ var ingredientTexts = [];
 kitchen.prototype = {
    create: function () {
       var ingButton = this.game.add.sprite(
-         450, 10, // x, y position
+         450, 20, // x, y position
          "play");
       ingButton.inputEnabled = true;
       console.log(this.openWindow);

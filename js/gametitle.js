@@ -3,8 +3,8 @@ var gametitle = function(game){}
 gametitle.prototype = {
   	create: function(){
 //        add game title image
-		var gameTitle = this.game.add.sprite(250,50,"gametitle");
-        gameTitle.scale.setTo(.3,.3);
+		gameTitle = this.game.add.sprite(this.game.world.centerX,50,"gametitle");
+        gameTitle.scale.setTo(.5,.5);
 		gameTitle.anchor.setTo(0.5,0.5);
         
 //        create a play button
