@@ -1,9 +1,7 @@
 var recipes = function(game){}
  
 recipes.prototype = {
-    preload: function(){       
-        this.game.load.image("fried_rice","../images/friedrice.jpg");      
-	},
+    
     create: function(){
         var foodButton = this.game.add.button(this.game.world.centerX,120,"fried_rice",this.openKitchen,this);
         foodButton.scale.setTo(.1,.1);
